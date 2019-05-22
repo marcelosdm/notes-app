@@ -1,15 +1,12 @@
 const validator = require('validator');
+const chalk = require('chalk');
 
 const getNotes = require('./notes');
+const validate = require('./utils');
 
 const notes = getNotes();
 
 console.log(notes);
 
-console.log(validator.isURL('youcan'));
-
-// const add = require('./utils');
-
-// const sum = add(3, 5);
-
-// console.log(sum, 'from app.js');
+validate('youcan.com');
+validate('youcan');
